@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*Default usage*@
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("text1") <br /> @*name of textbox*@
+            @Html.CheckBox("check1") @("I Accept") @*name of checkbox*@
+            <input type="submit" value="Send" />
+        }
+        <br /><br />
+
+        @*First Parameter : Index Name
+        Second Parameter : Controller Name*@
+
+        @using (Html.BeginForm("Index", "Home"))
+        {
+            @Html.TextBox("text1") <br /> @*name of textbox*@
+            @Html.CheckBox("check1") @("I Accept") @*name of checkbox*@
+            <input type="submit" value="Send" />
+        }
+
+        @*First Parameter  :Index Name
+          Second Parameter :Controller Name
+          ThirdParameter   :Form Method Type*@
+        @using (Html.BeginForm("Index", "Home",FormMethod.Post))
+        {
+            @Html.TextBox("text1") <br /> @*name of textbox*@
+            @Html.CheckBox("check1") @("I Accept") @*name of checkbox*@
+            <input type="submit" value="Send" />
+        }
+    </div>
+</body>
+</html>
