@@ -1,2 +1,2 @@
 # Mvc Tutorial
- Simple Mvc examples For Beginner
+ Simple Mvc examples For Beginners
