@@ -1,0 +1,39 @@
+﻿@using Mvc_Model_ModelBinding.Models
+@*define model which sent to view*@
+@model Person
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home Page</title>
+</head>
+<body>
+    <div><h2>Home Page</h2></div>
+    <div>
+        @*Home Controller -Index Action*@
+
+        <b>Name    :@Model.Name</b><br />
+        <b>Surname :@Model.Surname</b><br />
+        <b>Age     :@Model.Age</b><br />
+    </div>
+    <hr />
+    <div>
+        <h2>Post Model To HomeController/Index action </h2>
+
+        @using (Html.BeginForm())
+        {
+            @*r referer to model*@
+
+            @Html.TextBoxFor(r => r.Name)
+            @Html.TextBoxFor(r => r.Surname)
+            @Html.TextBoxFor(r => r.Age)
+            <input type="submit" value="send model" />
+        }
+    </div>
+</body>
+</html>

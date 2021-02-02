@@ -1,0 +1,36 @@
+﻿@using Mvc_Model_ModelBinding.Models
+@*define model which sent to view*@
+@{
+    Layout = null;
+}
+@{
+    var personList = (List<Person>)ViewData["PersonList"]; // Cast the list
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PersonList2</title>
+</head>
+<body>
+    <div>
+        <h2> Person List 2</h2>
+    </div>
+
+    @*Home Controller -PersonList2 Action*@
+    <div>
+
+        @foreach (var item in @personList)
+        {
+            <br>@item.Name
+            <br>@item.Surname
+            <br>@item.Age
+            <hr />
+
+        }
+
+    </div>
+</body>
+</html>

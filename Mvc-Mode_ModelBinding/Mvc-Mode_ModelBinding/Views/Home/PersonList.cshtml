@@ -1,0 +1,33 @@
+﻿@using Mvc_Model_ModelBinding.Models
+@*define model which sent to view*@
+@model List<Person>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PersonList</title>
+</head>
+<body>
+    <div>
+        <h2>Person List Page</h2>
+    </div>
+    <hr />
+
+    @*Home Controller -PersonList Action*@
+    <div>
+        @foreach (var item in Model)
+        {
+            <br>@item.Name
+            <br>@item.Surname
+            <br>@item.Age
+            <hr />
+        }
+
+    </div>
+</body>
+</html>
