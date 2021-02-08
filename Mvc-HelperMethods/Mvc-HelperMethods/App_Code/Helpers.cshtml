@@ -1,0 +1,22 @@
+﻿@*Right Click ->add->partial page*@
+
+@helper Input(string name, string type, string value)
+{
+    <input name="@name" type="@type" value="@value" />
+}
+
+@helper CreateTable(string name, int rows, int columns)
+{
+    <table id="@name" name="@name" border="1">
+
+        @for(int i = 0; i < rows; i++)
+        {
+        <tr>
+            @for (int k = 0; k < columns; k++)
+            {
+                <td>@("("+i.ToString()+","+k.ToString()+" )")</td>
+            }
+            </tr>
+        }
+    </table>
+}
