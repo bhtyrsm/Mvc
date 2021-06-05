@@ -1,0 +1,60 @@
+﻿@model Mvc_EntityFrameWork.Models.Person
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Person</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h4>New Person</h4>
+    <div class="container">
+
+        @using (Html.BeginForm())
+        {
+            <div class="input-group mb-3" style="margin-top:20px">
+                <span class="input-group-text" id="txtName">Name</span>
+                @Html.TextBoxFor(r => r.Name, new { @class = "form-control", placeholder = "Name", aria_label = "Username", aria_describedby = "txtName" })
+            </div>
+
+            <div class="input-group mb-3" style="margin-top:20px">
+                <span class="input-group-text" id="txtName">Surname</span>
+                @Html.TextBoxFor(r => r.Surname, new { @class = "form-control", placeholder = "Surname", aria_label = "Username", aria_describedby = "txtName" })
+            </div>
+
+            <div class="input-group mb-3" style="margin-top:20px">
+                <span class="input-group-text" id="txtName">Age</span>
+                @Html.TextBoxFor(r => r.Age, new { @class = "form-control", placeholder = "Age", aria_label = "Username", aria_describedby = "txtName" })
+            </div>
+
+            <div class="input-group mb-3" style="margin-top:20px">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+
+            <div class="input-group mb-3" style="margin-top:20px">
+
+                @if (ViewBag.Result != null)
+                {
+                    if (ViewBag.Status)
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @(ViewBag.Result)
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @(ViewBag.Result)
+                        </div>
+                    }
+                }
+            </div>
+        }
+    </div>
+</body>
+</html>
