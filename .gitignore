@@ -13,3 +13,4 @@ Mvc-HelperMethods/.vs/Mvc-HelperMethods/v15/Server/sqlite3/storage.ide-wal
 AutoGenerateControllers/.vs/AutoGenerateControllers/v15/Server/sqlite3/storage.ide
 AutoGenerateControllers/.vs/AutoGenerateControllers/v15/Server/sqlite3/storage.ide-wal
 AutoGenerateControllers/.vs/AutoGenerateControllers/v15/Server/sqlite3/storage.ide-shm
+*.lock
