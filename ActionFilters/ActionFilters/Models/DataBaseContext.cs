@@ -8,7 +8,14 @@ namespace ActionFilters.Models
 {
     public class DataBaseContext:DbContext
     {
+        
+        public DataBaseContext() : base("DataBaseContext")
+        {
+           
+        }
+
         public DbSet<Log> Logs { get; set; }
         public DbSet<SiteUser> SiteUsers { get; set; }
     }
+
 }
